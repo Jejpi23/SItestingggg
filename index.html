@@ -1,1 +1,206 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sztuczna Inteligencja – Materiały do nauki</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sztuczna Inteligencja – Materiały do nauki</h1>
+    <nav>
+      <ul>
+        <li><a href="#sztuczna-inteligencja">Sztuczna inteligencja</a></li>
+        <li><a href="#uczenie-maszynowe">Uczenie maszynowe</a></li>
+        <li><a href="#sieci-neuronowe">Sieci neuronowe</a></li>
+        <li><a href="#przyklady-zastosowan">Przykłady zastosowań</a></li>
+        <li><a href="#regresja">Regresja</a></li>
+        <li><a href="#drzewa-decyzyjne">Drzewa decyzyjne</a></li>
+        <li><a href="#klastrowanie-hierarchiczne">Klastrowanie hierarchiczne</a></li>
+        <li><a href="#logika-rozmyta">Logika rozmyta</a></li>
+        <li><a href="#biologiczne-algorytmy">Biologicznie inspirowane algorytmy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sekcja 1: Sztuczna inteligencja -->
+    <section id="sztuczna-inteligencja">
+      <h2>Sztuczna inteligencja (SI)</h2>
+      <p>
+        Sztuczna inteligencja to dziedzina informatyki zajmująca się tworzeniem
+        rozwiązań naśladujących ludzkie procesy myślenia, mówienia, uczenia się,
+        planowania i rozumienia. Nazywana bywa też inteligencją maszynową 
+        lub komputerową. 
+      </p>
+      <p>
+        W definicji wg. <em>Arthur Samuel (IBM Journal of Research and Development, 1959)</em>:<br />
+        „Machine Learning is a subfield of computer science that gives computers
+        the ability to learn without being programmed”.
+      </p>
+      <p>
+        Więcej informacji: 
+        <a href="https://pl.wikipedia.org/wiki/Sztuczna_inteligencja" target="_blank">
+          Artykuł w Wikipedii
+        </a>
+      </p>
+    </section>
+
+    <!-- Sekcja 2: Uczenie maszynowe -->
+    <section id="uczenie-maszynowe">
+      <h2>Uczenie maszynowe (ML)</h2>
+      <p>
+        Uczenie maszynowe jest podzbiorem sztucznej inteligencji i skupia się na
+        tym, by komputery samodzielnie uczyły się na podstawie danych oraz
+        doskonaliły się dzięki zdobytemu doświadczeniu. Wykorzystuje algorytmy
+        trenowane do znajdowania wzorców oraz podejmowania decyzji i
+        prognozowania.
+      </p>
+      <p>
+        <strong>Typowy podział ML:</strong>
+      </p>
+      <ul>
+        <li>Nadzorowane – dane wejściowe i wyjściowe są oznaczone etykietami</li>
+        <li>Nienadzorowane – brak znanych etykiet wynikowych, algorytm sam szuka wzorców</li>
+        <li>Częściowo nadzorowane – połączenie powyższych dwóch metod</li>
+        <li>Ze wzmocnieniem – algorytm uczy się poprzez otrzymywanie nagród za właściwe akcje</li>
+      </ul>
+    </section>
+
+    <!-- Sekcja 3: Sieci neuronowe -->
+    <section id="sieci-neuronowe">
+      <h2>Sieci neuronowe</h2>
+      <p>
+        Sieci neuronowe (ang. Neural Networks) to struktury wzorowane na 
+        działaniu ludzkiego mózgu, składające się ze sztucznych neuronów
+        połączonych warstwowo. Metoda ta jest szeroko stosowana w uczeniu
+        maszynowym – szczególnie w uczeniu głębokim.
+      </p>
+      <p>
+        <strong>Przykłady:</strong><br>
+        Perceptron (najprostsza sieć) – jeden neuron, brak warstw ukrytych,<br>
+        Wielowarstwowy perceptron – kilka warstw, każda kolejna warstwa uczy się 
+        coraz bardziej złożonych reprezentacji danych.
+      </p>
+    </section>
+
+    <!-- Sekcja 4: Przykłady zastosowań SI -->
+    <section id="przyklady-zastosowan">
+      <h2>Przykłady zastosowań SI</h2>
+      <ul>
+        <li>
+          Mechanizmy rekomendacji – stosowane w sklepach internetowych, 
+          serwisach muzycznych i filmowych
+        </li>
+        <li>
+          Dynamiczny marketing – analiza dużych i nieuporządkowanych zbiorów 
+          danych (np. historia zakupów, preferencje) w celu personalizowania 
+          ofert
+        </li>
+        <li>
+          ERP i automatyzacja – analiza wskaźników sprzedaży, trendów rynkowych 
+          itp. w celu lepszego zarządzania procesami w firmie
+        </li>
+        <li>
+          Prognozowanie awarii (Maintenance) – przewidywanie usterek maszyn
+          i przestojów
+        </li>
+        <li>
+          Generowanie obrazów – np. DALL-E 3 (wykorzystanie modeli SI do tworzenia 
+          grafik na podstawie promptów tekstowych)
+        </li>
+      </ul>
+    </section>
+
+    <!-- Sekcja 5: Regresja -->
+    <section id="regresja">
+      <h2>Regresja</h2>
+      <p>
+        Regresja pozwala modelować zależność między zmiennymi. W przypadku 
+        liniowym definiujemy linię najlepszego dopasowania (metoda 
+        najmniejszych kwadratów). Dla danych nieliniowych stosuje się m.in. 
+        regresję wielomianową.
+      </p>
+      <ul>
+        <li>Regresja liniowa</li>
+        <li>Regresja wielomianowa</li>
+        <li>Regresja wielokrotna (wieloraka)</li>
+      </ul>
+      <p>
+        Główny wskaźnik oceny jakości dopasowania modelu regresji to 
+        współczynnik <em>R-squared</em> (od 0 do 1), przy czym wartości 
+        bliższe 1 oznaczają lepsze dopasowanie.
+      </p>
+    </section>
+
+    <!-- Sekcja 6: Drzewa decyzyjne -->
+    <section id="drzewa-decyzyjne">
+      <h2>Drzewa decyzyjne</h2>
+      <p>
+        Drzewa decyzyjne to metoda wspomagania procesu decyzyjnego
+        polegająca na tworzeniu podziałów danych w węzłach w oparciu o 
+        kolejne kryteria. Stosowane zarówno w klasyfikacji, jak i regresji 
+        (algorytm CART).
+      </p>
+      <p>
+        <strong>Węzły</strong> definiują warunki decyzyjne, zaś 
+        <strong>liście</strong> są ostatecznymi decyzjami. Jakość podziału 
+        ocenia się m.in. przy użyciu współczynnika Gini (miara „zanieczyszczenia” 
+        węzła) lub entropii.
+      </p>
+    </section>
+
+    <!-- Sekcja 7: Klastrowanie hierarchiczne -->
+    <section id="klastrowanie-hierarchiczne">
+      <h2>Klastrowanie hierarchiczne</h2>
+      <p>
+        Metoda uczenia bez nadzoru, grupująca punkty danych w hierarchiczne 
+        klastry. Tworzy dendrogram, który pozwala wizualizować łączenie 
+        najmniejszych grup w coraz większe. Stosuje różne miary odległości 
+        (np. euklidesowa, Manhattan) i metody łączenia (single, complete, ward).
+      </p>
+    </section>
+
+    <!-- Sekcja 8: Logika rozmyta -->
+    <section id="logika-rozmyta">
+      <h2>Logika rozmyta</h2>
+      <p>
+        Logika rozmyta pozwala modelować nieprecyzyjne informacje, 
+        przeciwstawne do klasycznej logiki binarnej (0 lub 1). Tutaj wartości 
+        przynależności do zbioru mogą zawierać się w przedziale [0,1]. 
+        Wykorzystuje się ją w sterowaniu (np. klimatyzacją), przetwarzaniu 
+        języka i wielu aplikacjach, gdzie występuje niepewność.
+      </p>
+    </section>
+
+    <!-- Sekcja 9: Biologicznie inspirowane algorytmy -->
+    <section id="biologiczne-algorytmy">
+      <h2>Biologicznie inspirowane algorytmy optymalizacyjne</h2>
+      <p>
+        Metody czerpiące z natury i procesów biologicznych do rozwiązywania 
+        problemów optymalizacyjnych. Przykłady:
+      </p>
+      <ul>
+        <li>Algorytm genetyczny (GA) – inspirowany ewolucją</li>
+        <li>Algorytm mrówkowy (ACO) – naśladujący zachowanie mrówek</li>
+        <li>Optymalizacja rojem cząsteczek (PSO) – wzorowana na zachowaniu stad</li>
+        <li>Algorytm pszczeli (ABC) – wzorowany na poszukiwaniu pożywienia przez pszczoły</li>
+      </ul>
+      <p>
+        Stosowane tam, gdzie tradycyjne metody optymalizacji mogą być 
+        niewystarczające lub zbyt złożone.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Strona przygotowana w oparciu o materiały z pliku PDF (treści 
+      na temat sztucznej inteligencji, ML, sieci neuronowych i innych). 
+    </p>
+    <p>Wersja demonstracyjna – 2025</p>
+  </footer>
+</body>
+</html>
