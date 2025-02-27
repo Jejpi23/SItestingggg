@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sztuczna Inteligencja – Materiały do nauki</title>
+  <title>Sztuczna Inteligencja – Rozszerzone Materiały do Nauki</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,39 +11,71 @@
     <h1>Sztuczna Inteligencja – Materiały do nauki</h1>
     <nav>
       <ul>
+        <li><a href="#definicje">Definicje i wstęp</a></li>
         <li><a href="#sztuczna-inteligencja">Sztuczna inteligencja</a></li>
         <li><a href="#uczenie-maszynowe">Uczenie maszynowe</a></li>
         <li><a href="#sieci-neuronowe">Sieci neuronowe</a></li>
-        <li><a href="#przyklady-zastosowan">Przykłady zastosowań</a></li>
+        <li><a href="#modele-uczenia">Modele uczenia</a></li>
+        <li><a href="#zastosowania">Zastosowania</a></li>
+        <li><a href="#problemy-i-korzysci">Problemy i korzyści ML</a></li>
         <li><a href="#regresja">Regresja</a></li>
         <li><a href="#drzewa-decyzyjne">Drzewa decyzyjne</a></li>
         <li><a href="#klastrowanie-hierarchiczne">Klastrowanie hierarchiczne</a></li>
         <li><a href="#logika-rozmyta">Logika rozmyta</a></li>
-        <li><a href="#biologiczne-algorytmy">Biologicznie inspirowane algorytmy</a></li>
+        <li><a href="#bio-algorytmy">Biologicznie inspirowane algorytmy</a></li>
+        <li><a href="#inne-zagadnienia">Inne ważne zagadnienia</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <!-- Sekcja DEFINICJE OGÓLNE -->
+    <section id="definicje">
+      <h2>Definicje i wstęp</h2>
+      <p>
+        <strong>Sztuczna inteligencja (SI, ang. Artificial Intelligence):</strong> 
+        inteligencja wykazywana przez urządzenia sztuczne, w przeciwieństwie do inteligencji
+        naturalnej. Obejmuje zagadnienia związane z myśleniem, rozumieniem, mową, planowaniem,
+        uczeniem się. 
+      </p>
+      <p>
+        <strong>Uczenie maszynowe (ang. Machine Learning):</strong> poddziedzina SI, w której 
+        komputery „uczą się” na podstawie danych, bez bycia explicite zaprogramowane co do 
+        konkretnych reguł dla każdego przypadku.
+      </p>
+      <p>
+        <strong>Deep Learning (uczenie głębokie):</strong> wyspecjalizowana forma uczenia 
+        maszynowego, korzystająca z wielowarstwowych sieci neuronowych, pozwalających na 
+        automatyczne „dokładne” wychwytywanie wzorców z dużych i złożonych zbiorów danych.
+      </p>
+      <p>
+        Według <em>Arthura Samuela (IBM, 1959)</em>: „Machine Learning is a subfield of 
+        computer science that gives computers the ability to learn without being programmed.”
+      </p>
+    </section>
+
     <!-- Sekcja 1: Sztuczna inteligencja -->
     <section id="sztuczna-inteligencja">
-      <h2>Sztuczna inteligencja (SI)</h2>
+      <h2>Sztuczna inteligencja</h2>
       <p>
-        Sztuczna inteligencja to dziedzina informatyki zajmująca się tworzeniem
-        rozwiązań naśladujących ludzkie procesy myślenia, mówienia, uczenia się,
-        planowania i rozumienia. Nazywana bywa też inteligencją maszynową 
-        lub komputerową. 
+        Sztuczna inteligencja (SI) jest terminem obejmującym różnorodne techniki 
+        umożliwiające systemom komputerowym realizowanie zadań, które w pewnym 
+        stopniu wymagają „inteligencji” – np. wnioskowania, rozpoznawania wzorców,
+        optymalnego planowania, przetwarzania języka naturalnego czy podejmowania 
+        decyzji.
       </p>
+      <ul>
+        <li><strong>Symulacja procesów myślowych człowieka</strong> (rozpoznawanie obrazów, mowy, 
+            tekstu, rozwiązywanie problemów)</li>
+        <li><strong>Naśladowanie zachowań człowieka</strong> (uczenie się, wnioskowanie, tworzenie hipotez)</li>
+      </ul>
       <p>
-        W definicji wg. <em>Arthur Samuel (IBM Journal of Research and Development, 1959)</em>:<br />
-        „Machine Learning is a subfield of computer science that gives computers
-        the ability to learn without being programmed”.
-      </p>
-      <p>
-        Więcej informacji: 
+        Istnieje wiele definicji SI, w tym popularna z 
         <a href="https://pl.wikipedia.org/wiki/Sztuczna_inteligencja" target="_blank">
-          Artykuł w Wikipedii
-        </a>
+          Wikipedii
+        </a>. W kontekście nauki i praktyki inżynierskiej SI skupia się szczególnie na 
+        technikach uczenia maszynowego, przetwarzaniu języka naturalnego, robotyce,
+        rozpoznawaniu obrazów i systemach ekspertowych.
       </p>
     </section>
 
@@ -52,153 +83,299 @@
     <section id="uczenie-maszynowe">
       <h2>Uczenie maszynowe (ML)</h2>
       <p>
-        Uczenie maszynowe jest podzbiorem sztucznej inteligencji i skupia się na
-        tym, by komputery samodzielnie uczyły się na podstawie danych oraz
-        doskonaliły się dzięki zdobytemu doświadczeniu. Wykorzystuje algorytmy
-        trenowane do znajdowania wzorców oraz podejmowania decyzji i
-        prognozowania.
-      </p>
-      <p>
-        <strong>Typowy podział ML:</strong>
+        <em>Uczenie maszynowe</em> jest gałęzią sztucznej inteligencji, która koncentruje się 
+        na rozwijaniu algorytmów zdolnych do wyszukiwania wzorców, korelacji i reguł 
+        w zbiorach danych. Dzięki temu komputery mogą „uczyć się” i podejmować decyzje
+        lub wykonywać prognozy.
       </p>
       <ul>
-        <li>Nadzorowane – dane wejściowe i wyjściowe są oznaczone etykietami</li>
-        <li>Nienadzorowane – brak znanych etykiet wynikowych, algorytm sam szuka wzorców</li>
-        <li>Częściowo nadzorowane – połączenie powyższych dwóch metod</li>
-        <li>Ze wzmocnieniem – algorytm uczy się poprzez otrzymywanie nagród za właściwe akcje</li>
+        <li>Algorytmy uczą się na podstawie przykładów (danych treningowych).</li>
+        <li>Nadrzędnym celem jest <strong>maksymalizacja trafności przewidywań</strong> 
+            lub decyzji dla nowych, nieznanych wcześniej danych.</li>
       </ul>
+      <p>
+        Tradycyjne programowanie można przedstawić jako: <br>
+        <strong>dane + algorytm = wynik</strong>, <br>
+        a uczenie maszynowe odwrotnie: <br>
+        <strong>dane + wyniki = algorytm</strong>.
+      </p>
+      <p>
+        Uczenie maszynowe zyskuje coraz większą popularność w różnych dziedzinach – 
+        od biznesu, poprzez medycynę, aż do inżynierii czy nauk społecznych.
+      </p>
     </section>
 
     <!-- Sekcja 3: Sieci neuronowe -->
     <section id="sieci-neuronowe">
       <h2>Sieci neuronowe</h2>
       <p>
-        Sieci neuronowe (ang. Neural Networks) to struktury wzorowane na 
-        działaniu ludzkiego mózgu, składające się ze sztucznych neuronów
-        połączonych warstwowo. Metoda ta jest szeroko stosowana w uczeniu
-        maszynowym – szczególnie w uczeniu głębokim.
+        Sieci neuronowe to modele obliczeniowe wzorowane na strukturze i 
+        sposobie działania ludzkiego mózgu:
       </p>
-      <p>
-        <strong>Przykłady:</strong><br>
-        Perceptron (najprostsza sieć) – jeden neuron, brak warstw ukrytych,<br>
-        Wielowarstwowy perceptron – kilka warstw, każda kolejna warstwa uczy się 
-        coraz bardziej złożonych reprezentacji danych.
+      <ul>
+        <li><strong>Neuron (sztuczny)</strong> – podstawowy element obliczeniowy, 
+            przyjmujący wejścia, przetwarzający je i przekazujący wynik dalej.</li>
+        <li><strong>Warstwy sieci</strong> – zorganizowane zbiory neuronów (warstwa 
+            wejściowa, ukryte i wyjściowe).</li>
+        <li><strong>Połączenia i wagi</strong> – każda krawędź (połączenie) ma przypisaną wagę, 
+            która jest modyfikowana w procesie uczenia.</li>
+      </ul>
+      <p> 
+        Najprostszym przykładem jest <strong>Perceptron</strong> – pojedynczy neuron, bez 
+        warstw ukrytych. Natomiast <strong>wielowarstwowe perceptrony (MLP)</strong> 
+        mogą posiadać wiele warstw ukrytych; takie sieci umożliwiają uczenie głębokie 
+        (ang. Deep Learning).
       </p>
     </section>
 
-    <!-- Sekcja 4: Przykłady zastosowań SI -->
-    <section id="przyklady-zastosowan">
-      <h2>Przykłady zastosowań SI</h2>
+    <!-- Sekcja 4: Modele uczenia -->
+    <section id="modele-uczenia">
+      <h2>Modele uczenia w ML</h2>
+      <p>
+        W uczeniu maszynowym często wyróżnia się następujące tryby:
+      </p>
+      <ol>
+        <li><strong>Uczenie nadzorowane (ang. supervised learning)</strong>
+          <ul>
+            <li>Dane wejściowe są opatrzone etykietami (pożądane odpowiedzi/klasy).</li>
+            <li>Algorytm stara się możliwie dobrze dopasować funkcję łączącą dane wejściowe z etykietami.</li>
+            <li>Przykłady: klasyfikacja obrazów na koty i psy, regresja cen mieszkań.</li>
+          </ul>
+        </li>
+        <li><strong>Uczenie nienadzorowane (ang. unsupervised learning)</strong>
+          <ul>
+            <li>Brak etykiet w danych, algorytm sam stara się wykryć struktury, grupy, klastrowanie.</li>
+            <li>Przykłady: grupowanie klientów o podobnych zachowaniach zakupowych.</li>
+          </ul>
+        </li>
+        <li><strong>Uczenie częściowo nadzorowane (semi-supervised learning)</strong>
+          <ul>
+            <li>Część danych posiada etykiety, a część nie.</li>
+            <li>W praktyce występuje często, gdy pełne etykietowanie jest kosztowne lub trudne.</li>
+          </ul>
+        </li>
+        <li><strong>Uczenie ze wzmocnieniem (ang. reinforcement learning)</strong>
+          <ul>
+            <li>Algorytm (agent) uczy się przez interakcję z otoczeniem, otrzymuje nagrody/punkty 
+                (lub kary) w zależności od poprawności wykonanej akcji.</li>
+            <li>Przykład: nauka gry w szachy czy jazdy autonomicznej samochodu.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Sekcja 5: Zastosowania -->
+    <section id="zastosowania">
+      <h2>Zastosowania sztucznej inteligencji i ML</h2>
+      <p>
+        Dzięki szybkiemu rozwojowi metod SI i ML, możemy spotkać je w wielu sektorach:
+      </p>
       <ul>
-        <li>
-          Mechanizmy rekomendacji – stosowane w sklepach internetowych, 
-          serwisach muzycznych i filmowych
-        </li>
-        <li>
-          Dynamiczny marketing – analiza dużych i nieuporządkowanych zbiorów 
-          danych (np. historia zakupów, preferencje) w celu personalizowania 
-          ofert
-        </li>
-        <li>
-          ERP i automatyzacja – analiza wskaźników sprzedaży, trendów rynkowych 
-          itp. w celu lepszego zarządzania procesami w firmie
-        </li>
-        <li>
-          Prognozowanie awarii (Maintenance) – przewidywanie usterek maszyn
-          i przestojów
-        </li>
-        <li>
-          Generowanie obrazów – np. DALL-E 3 (wykorzystanie modeli SI do tworzenia 
-          grafik na podstawie promptów tekstowych)
-        </li>
+        <li><strong>Mechanizmy rekomendacji</strong> – sklepy internetowe, serwisy muzyczne, 
+            platformy VOD.</li>
+        <li><strong>Dynamiczny marketing</strong> – analityka dużych zbiorów danych (np. historia 
+            zakupów, preferencje), personalizacja ofert w czasie rzeczywistym.</li>
+        <li><strong>ERP i automatyzacja procesów</strong> – analiza wydajności, trendów rynkowych, 
+            zarządzanie łańcuchem dostaw.</li>
+        <li><strong>Przeglądy zapobiegawcze</strong> – przewidywanie awarii urządzeń (IoT), 
+            minimalizacja przestojów.</li>
+        <li><strong>Generowanie obrazów</strong> – np. modele DALL-E (transformerowe), 
+            tworzenie obrazów na podstawie promptu tekstowego.</li>
       </ul>
     </section>
 
-    <!-- Sekcja 5: Regresja -->
+    <!-- Sekcja 6: Problemy i korzyści ML -->
+    <section id="problemy-i-korzysci">
+      <h2>Problemy i korzyści stosowania ML</h2>
+      <h3>Potencjalne problemy</h3>
+      <ul>
+        <li><strong>Błędne wnioskowanie i stronniczość</strong> – dane mogą być niepełne lub 
+            obarczone błędami, co przenosi się na model.</li>
+        <li><strong>Przeuczenie (overfitting)</strong> – zbyt dobre dopasowanie do danych 
+            treningowych, model słabo generalizuje.</li>
+        <li><strong>Korelacja a przyczynowość</strong> – wysoka korelacja nie zawsze oznacza 
+            związek przyczynowo-skutkowy (np. słynny przykład margaryny i rozwodów).</li>
+        <li><strong>Trudność w wyjaśnieniu działania (black box)</strong> – niektóre modele 
+            (np. głębokie sieci neuronowe) są mało interpretowalne.</li>
+      </ul>
+
+      <h3>Kluczowe korzyści</h3>
+      <ul>
+        <li><strong>Zautomatyzowana analiza</strong> – zdolność przetwarzania dużych ilości 
+            danych i znajdowania wzorców niedostrzegalnych dla człowieka.</li>
+        <li><strong>Dokładniejsze prognozy</strong> – zwiększanie skuteczności decyzji czy 
+            rekomendacji.</li>
+        <li><strong>Oszczędność kosztów</strong> – automatyzacja i lepsze prognozowanie 
+            prowadzą do obniżenia kosztów operacyjnych.</li>
+        <li><strong>Rozwiązania wielozadaniowe</strong> – ML można zastosować w różnych branżach 
+            (medycyna, rolnictwo, transport, przemysł).</li>
+      </ul>
+    </section>
+
+    <!-- Sekcja 7: Regresja -->
     <section id="regresja">
       <h2>Regresja</h2>
       <p>
-        Regresja pozwala modelować zależność między zmiennymi. W przypadku 
-        liniowym definiujemy linię najlepszego dopasowania (metoda 
-        najmniejszych kwadratów). Dla danych nieliniowych stosuje się m.in. 
-        regresję wielomianową.
+        Regresja to metoda modelowania zależności między zmienną zależną (wyjściową) a 
+        jedną lub wieloma zmiennymi niezależnymi (wejściowymi). 
       </p>
       <ul>
-        <li>Regresja liniowa</li>
-        <li>Regresja wielomianowa</li>
-        <li>Regresja wielokrotna (wieloraka)</li>
+        <li><strong>Regresja liniowa</strong> – modelowanie za pomocą prostej linii. 
+            Metoda najmniejszych kwadratów dopasowuje funkcję 
+            <code>y = a*x + b</code>.</li>
+        <li><strong>Regresja wielomianowa</strong> – jeśli dane nie układają się liniowo, 
+            można użyć wielomianu, np. <code>y = a + b*x + c*x^2 + ...</code>.</li>
+        <li><strong>Regresja wielokrotna (wieloraka)</strong> – kiedy występuje więcej 
+            zmiennych wejściowych (wielowymiarowe <em>X</em>).</li>
       </ul>
       <p>
-        Główny wskaźnik oceny jakości dopasowania modelu regresji to 
-        współczynnik <em>R-squared</em> (od 0 do 1), przy czym wartości 
-        bliższe 1 oznaczają lepsze dopasowanie.
+        <strong>Współczynnik determinacji (R-squared)</strong> – powszechnie stosowany 
+        wskaźnik dobroci dopasowania modelu (od 0 do 1, im bliżej 1, tym lepsze dopasowanie).
       </p>
     </section>
 
-    <!-- Sekcja 6: Drzewa decyzyjne -->
+    <!-- Sekcja 8: Drzewa decyzyjne -->
     <section id="drzewa-decyzyjne">
       <h2>Drzewa decyzyjne</h2>
       <p>
-        Drzewa decyzyjne to metoda wspomagania procesu decyzyjnego
-        polegająca na tworzeniu podziałów danych w węzłach w oparciu o 
-        kolejne kryteria. Stosowane zarówno w klasyfikacji, jak i regresji 
-        (algorytm CART).
+        Drzewo decyzyjne (classification lub regression tree) to struktura drzewa, 
+        w której każdy <em>węzeł</em> reprezentuje warunek podziału danych, 
+        a <em>liście</em> – ostateczne decyzje lub wartości.
+      </p>
+      <ul>
+        <li><strong>Algorytm ID3</strong> – bazuje na entropii i przyroście informacji 
+            (information gain).</li>
+        <li><strong>Algorytm CART</strong> – (Classification and Regression Trees), 
+            używa najczęściej kryterium Gini lub entropii.</li>
+      </ul>
+      <p>
+        <strong>Współczynnik Gini</strong> (Gini impurity) – miara „zanieczyszczenia” 
+        węzła, czyli różnorodności klas. Niższy gini oznacza lepsze „wyczyszczenie” 
+        (bardziej jednorodny podział).
       </p>
       <p>
-        <strong>Węzły</strong> definiują warunki decyzyjne, zaś 
-        <strong>liście</strong> są ostatecznymi decyzjami. Jakość podziału 
-        ocenia się m.in. przy użyciu współczynnika Gini (miara „zanieczyszczenia” 
-        węzła) lub entropii.
+        Entropia – alternatywna miara niepewności w węźle, 
+        <strong>entropia = - Σ (p_i * log2 p_i)</strong>.
+      </p>
+      <p>
+        Drzewa decyzyjne mogą ulec przeuczeniu (overfitting), dlatego często 
+        stosuje się przycinanie drzewa (pruning).
       </p>
     </section>
 
-    <!-- Sekcja 7: Klastrowanie hierarchiczne -->
+    <!-- Sekcja 9: Klastrowanie hierarchiczne -->
     <section id="klastrowanie-hierarchiczne">
       <h2>Klastrowanie hierarchiczne</h2>
       <p>
-        Metoda uczenia bez nadzoru, grupująca punkty danych w hierarchiczne 
-        klastry. Tworzy dendrogram, który pozwala wizualizować łączenie 
-        najmniejszych grup w coraz większe. Stosuje różne miary odległości 
-        (np. euklidesowa, Manhattan) i metody łączenia (single, complete, ward).
+        Forma uczenia nienadzorowanego, która grupuje dane w hierarchiczną strukturę
+        (dendrogram). Wyróżnia się:
+      </p>
+      <ul>
+        <li><strong>Metodę aglomeracyjną (bottom-up)</strong> – każdy punkt jest początkowo 
+            osobnym klastrem i są łączone w coraz większe grupy.</li>
+        <li><strong>Metodę dzielącą (top-down)</strong> – odwrotnie: jeden zbiór dzielimy na 
+            coraz mniejsze klastry.</li>
+      </ul>
+      <p>
+        <strong>Metryki odległości</strong>: euklidesowa, Manhattan, Minkowski, etc. <br>
+        <strong>Metody łączenia (linkage)</strong>: single, complete, average, ward.
+      </p>
+      <p>
+        Powstaje dendrogram, który pokazuje kolejne etapy łączenia klastrów i pozwala 
+        zdecydować, na jakim poziomie „uciąć” drzewo, by wybrać określoną liczbę klastrów.
       </p>
     </section>
 
-    <!-- Sekcja 8: Logika rozmyta -->
+    <!-- Sekcja 10: Logika rozmyta -->
     <section id="logika-rozmyta">
       <h2>Logika rozmyta</h2>
       <p>
-        Logika rozmyta pozwala modelować nieprecyzyjne informacje, 
-        przeciwstawne do klasycznej logiki binarnej (0 lub 1). Tutaj wartości 
-        przynależności do zbioru mogą zawierać się w przedziale [0,1]. 
-        Wykorzystuje się ją w sterowaniu (np. klimatyzacją), przetwarzaniu 
-        języka i wielu aplikacjach, gdzie występuje niepewność.
+        W logice klasycznej (zero-jedynkowej) coś jest prawdziwe (1) albo fałszywe (0). 
+        Natomiast w <strong>logice rozmytej</strong> (ang. Fuzzy Logic) wartości prawdziwości 
+        są stopniowalne, przyjmując wartości w przedziale [0,1].
+      </p>
+      <p>
+        <strong>Zbiory rozmyte</strong> pozwalają opisywać zjawiska lub pojęcia, które są 
+        nieostre lub „niewyraźne”, np. temperatura gorąca, wysoki człowiek itp.
+      </p>
+      <ul>
+        <li>Stopień przynależności elementu do zbioru określa <em>funkcja przynależności</em> 
+            (np. trójkątna, trapezoidalna, gaussowska).</li>
+        <li>Reguły lingwistyczne typu <em>IF (temperatura jest wysoka) AND (wilgotność wysoka)
+            THEN (włącz klimatyzację)</em> stanowią podstawę systemów rozmytych.</li>
+        <li>Stosowana m.in. w sterowaniu (systemy AGD, klimatyzacje, itd.)</li>
+      </ul>
+    </section>
+
+    <!-- Sekcja 11: Biologicznie inspirowane algorytmy -->
+    <section id="bio-algorytmy">
+      <h2>Biologicznie inspirowane algorytmy optymalizacyjne</h2>
+      <p>
+        Podzbiór metod optymalizacji i wyszukiwania, które czerpią z natury:
+      </p>
+      <ul>
+        <li>
+          <strong>Algorytm genetyczny (GA)</strong> – inspirowany ewolucją biologiczną, 
+          wykorzystuje operatory selekcji, krzyżowania i mutacji.
+        </li>
+        <li>
+          <strong>Algorytm mrówkowy (ACO)</strong> – bazuje na zachowaniach kolonii mrówek 
+          i ścieżkach feromonowych.
+        </li>
+        <li>
+          <strong>Optymalizacja rojem cząsteczek (PSO)</strong> – wzorowana na zachowaniu 
+          stad (np. ławic ryb, kluczy ptaków).
+        </li>
+        <li>
+          <strong>Algorytm pszczeli (ABC)</strong> – bazuje na sposobie, w jaki pszczoły 
+          poszukują nektaru, łączy eksplorację i eksploatację danych.
+        </li>
+      </ul>
+      <p>
+        Metody te są stosowane w sytuacjach, gdzie tradycyjne algorytmy 
+        deterministyczne są nieefektywne lub nie potrafią znaleźć rozwiązań 
+        w bardzo dużej przestrzeni poszukiwań.
       </p>
     </section>
 
-    <!-- Sekcja 9: Biologicznie inspirowane algorytmy -->
-    <section id="biologiczne-algorytmy">
-      <h2>Biologicznie inspirowane algorytmy optymalizacyjne</h2>
-      <p>
-        Metody czerpiące z natury i procesów biologicznych do rozwiązywania 
-        problemów optymalizacyjnych. Przykłady:
-      </p>
+    <!-- Sekcja 12: Inne ważne zagadnienia -->
+    <section id="inne-zagadnienia">
+      <h2>Inne ważne zagadnienia</h2>
+      <h3>Fuzja informacji vs. agregacja informacji</h3>
       <ul>
-        <li>Algorytm genetyczny (GA) – inspirowany ewolucją</li>
-        <li>Algorytm mrówkowy (ACO) – naśladujący zachowanie mrówek</li>
-        <li>Optymalizacja rojem cząsteczek (PSO) – wzorowana na zachowaniu stad</li>
-        <li>Algorytm pszczeli (ABC) – wzorowany na poszukiwaniu pożywienia przez pszczoły</li>
+        <li><strong>Agregacja</strong> – łączenie danych np. przez sumowanie, 
+            uśrednianie lub łączenie zbiorów w celu uzyskania jednego 
+            spójnego zestawu.</li>
+        <li><strong>Fuzja</strong> – bardziej zaawansowany proces, w którym 
+            dane z różnych źródeł są łączone i analizowane w celu pozyskania 
+            nowej, wyższej jakości informacji (wartość dodana > suma danych).</li>
       </ul>
+
+      <h3>Detekcja anomalii</h3>
       <p>
-        Stosowane tam, gdzie tradycyjne metody optymalizacji mogą być 
-        niewystarczające lub zbyt złożone.
+        Techniki służące do wykrywania nietypowych obserwacji (anomalnych 
+        lub odstających) w zbiorze danych, co może wskazywać na np. błędy, 
+        oszustwa, usterki lub nowe nieznane zjawiska.
       </p>
+
+      <h3>Wyzwania</h3>
+      <ul>
+        <li><strong>Skalowalność</strong> – wzrost wielkości zbioru danych wymaga 
+            wydajnych algorytmów i architektur (big data).</li>
+        <li><strong>Interpretowalność</strong> – zrozumienie, dlaczego algorytm 
+            podjął daną decyzję (np. modele black-box vs. white-box).</li>
+        <li><strong>Jakość danych</strong> – „garbage in, garbage out”: słabe dane 
+            prowadzą do słabych modeli.</li>
+      </ul>
     </section>
   </main>
 
   <footer>
     <p>
-      Strona przygotowana w oparciu o materiały z pliku PDF (treści 
-      na temat sztucznej inteligencji, ML, sieci neuronowych i innych). 
+      Strona przygotowana w oparciu o rozszerzone materiały z pliku PDF:
+      sztuczna inteligencja, uczenie maszynowe, sieci neuronowe, regresja, 
+      drzewa decyzyjne, klastrowanie, logika rozmyta i biologicznie 
+      inspirowane algorytmy optymalizacyjne.
     </p>
     <p>Wersja demonstracyjna – 2025</p>
   </footer>
